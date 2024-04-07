@@ -43,27 +43,28 @@ Clicar no botão de pesquisa
 Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
     Page Should Contain    text=${PRODUTO}
 
+#Gherkin
 Dado que estou na home page do site Amazon.com.br
-    Go To    url=${URL}
+    Acessar a home page do site Amazon.com.br
 
 Quando acessar o menu "Livros"
-    Click Element    locator=${MENU_LIVROS}
+    Entrar no menu "Livros"
 
 Então o título da página fica "${TITULO}"
-    Title Should Be    title=${TITULO}
+    Verificar se o título da página fica "${TITULO}"
 
 E aparece a frase "${TITULO}"
-    Element Text Should Be    locator=//h2[contains(.,'${TITULO}')]    expected=${TITULO}
+    Verificar se aparece a frase "${TITULO}"
 
 E aparece a categoria "${CATEGORIA}"
-    Page Should Contain Image    locator=${LOCATOR_CATEGORIA_LIVRO}    message=${CATEGORIA}
+    Verificar se aparece a categoria "${CATEGORIA}"
 
 Quando digitar o nome do produto "${PRODUTO}" no campo de pesquisa
-    Input Text    locator=${LOCATOR_PRODUTO}    text=${PRODUTO}
+    Digitar o nome do produto "${PRODUTO}" no campo de pesquisa
 
 E clicar no botão de pesquisa
-    Click Button    locator=${LOCATOR_BOTAO_PESQUISAR}
+    Clicar no botão de pesquisa
 
 Então o resultado da pesquisa deve estar listando o produto "${PRODUTO}"
-    Page Should Contain    text=${PRODUTO}
+    Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
     
