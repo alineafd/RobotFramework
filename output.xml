@@ -1,145 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-04-06T21:32:07.743445" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-04-07T15:39:18.794546" rpa="false" schemaversion="5">
 <suite id="s1" name="Amazon Testes" source="C:\Users\aline\OneDrive\Documentos\Cursos Udemy\RobotFramework\Web Testing\amazon_testes.robot">
 <test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
 <kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:08.310926" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2024-04-07T15:39:19.351140" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-06T21:32:08.309929" elapsed="5.203379"/>
+<status status="PASS" start="2024-04-07T15:39:19.351140" elapsed="8.005132"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-06T21:32:13.515933" elapsed="0.128358"/>
+<status status="PASS" start="2024-04-07T15:39:27.356272" elapsed="0.207443"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:08.308932" elapsed="5.335359"/>
+<status status="PASS" start="2024-04-07T15:39:19.350142" elapsed="8.214571"/>
 </kw>
 <kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:13.644291" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<msg time="2024-04-07T15:39:27.567706" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-04-06T21:32:13.644291" elapsed="4.085734"/>
+<status status="PASS" start="2024-04-07T15:39:27.567706" elapsed="6.675184"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:13.644291" elapsed="4.086731"/>
+<status status="PASS" start="2024-04-07T15:39:27.566707" elapsed="6.676183"/>
 </kw>
 <kw name="Entrar no menu &quot;Livros&quot;" owner="amazon_resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:17.733016" level="INFO">Clicking element '//a[@href='/Livros/b/?ie=UTF8&amp;node=6740748011&amp;ref_=nav_cs_books'][contains(.,'Livros')]'.</msg>
+<msg time="2024-04-07T15:39:34.335643" level="INFO">Clicking element '//a[@href='/Livros/b/?ie=UTF8&amp;node=6740748011&amp;ref_=nav_cs_books'][contains(.,'Livros')]'.</msg>
 <arg>locator=${MENU_LIVROS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T21:32:17.732019" elapsed="3.736236"/>
+<status status="PASS" start="2024-04-07T15:39:34.332649" elapsed="4.434295"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:17.732019" elapsed="3.745880"/>
+<status status="PASS" start="2024-04-07T15:39:34.331653" elapsed="4.435291"/>
 </kw>
 <kw name="Verificar se o título da página fica &quot;Livros | Amazon.com.br&quot;" owner="amazon_resources" source_name="Verificar se o título da página fica &quot;${TITULO}&quot;">
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:21.554897" level="INFO">Page title is 'Livros | Amazon.com.br'.</msg>
+<msg time="2024-04-07T15:39:38.848725" level="INFO">Page title is 'Livros | Amazon.com.br'.</msg>
 <arg>title=${TITULO}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-04-06T21:32:21.479894" elapsed="0.075003"/>
+<status status="PASS" start="2024-04-07T15:39:38.776918" elapsed="0.071807"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:21.478895" elapsed="0.076002"/>
+<status status="PASS" start="2024-04-07T15:39:38.776918" elapsed="0.071807"/>
 </kw>
 <kw name="Verificar se aparece a frase &quot;Loja de Livros&quot;" owner="amazon_resources" source_name="Verificar se aparece a frase &quot;${TITULO}&quot;">
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:21.556890" level="INFO">Verifying element '//h2[contains(.,'Loja de Livros')]' contains exact text 'Loja de Livros'.</msg>
-<arg>locator=${LOCATOR_LIVRO}</arg>
+<msg time="2024-04-07T15:39:38.858698" level="INFO">Verifying element '//h2[contains(.,'Loja de Livros')]' contains exact text 'Loja de Livros'.</msg>
+<arg>locator=//h2[contains(.,'${TITULO}')]</arg>
 <arg>expected=${TITULO}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-04-06T21:32:21.555893" elapsed="0.195610"/>
+<status status="PASS" start="2024-04-07T15:39:38.857701" elapsed="0.283247"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:21.555893" elapsed="0.195610"/>
+<status status="PASS" start="2024-04-07T15:39:38.856708" elapsed="0.284240"/>
 </kw>
 <kw name="Verificar se aparece a categoria &quot;Livros em Oferta&quot;" owner="amazon_resources" source_name="Verificar se aparece a categoria &quot;${CATEGORIA}&quot;">
 <kw name="Page Should Contain Image" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:22.374237" level="INFO">Current page contains image '//img[@src='https://m.media-amazon.com/images/G/32/br-books/2021/November/NewPage_BooksStore/Botoes_Menu/Pequeno/Botoes_19._CB650809174_.jpg']'.</msg>
+<msg time="2024-04-07T15:39:39.860705" level="INFO">Current page contains image '//img[@src='https://m.media-amazon.com/images/G/32/br-books/2021/November/NewPage_BooksStore/Botoes_Menu/Pequeno/Botoes_19._CB650809174_.jpg']'.</msg>
 <arg>locator=${LOCATOR_CATEGORIA_LIVRO}</arg>
 <arg>message=${CATEGORIA}</arg>
 <doc>Verifies image identified by ``locator`` is found from current page.</doc>
-<status status="PASS" start="2024-04-06T21:32:21.755494" elapsed="0.618743"/>
+<status status="PASS" start="2024-04-07T15:39:39.142940" elapsed="0.717765"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:21.754494" elapsed="0.620741"/>
+<status status="PASS" start="2024-04-07T15:39:39.141940" elapsed="0.718765"/>
 </kw>
 <kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-06T21:32:22.376232" elapsed="2.874353"/>
+<status status="PASS" start="2024-04-07T15:39:39.891620" elapsed="2.525817"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:22.375235" elapsed="2.875350"/>
+<status status="PASS" start="2024-04-07T15:39:39.890623" elapsed="2.526814"/>
 </kw>
 <doc>Esse teste verifica o menu "Eletrônicos" do site da Amazon.com.br
 E verifica a categoria "Computadores e Informática"</doc>
 <tag>categoria</tag>
 <tag>menus</tag>
-<status status="PASS" start="2024-04-06T21:32:08.300954" elapsed="16.949631"/>
+<status status="PASS" start="2024-04-07T15:39:19.348148" elapsed="23.070288"/>
 </test>
 <test id="s1-t2" name="Caso de teste 02 - Pesquisa de um produto" line="19">
 <kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:25.250585" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2024-04-07T15:39:42.420432" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-06T21:32:25.250585" elapsed="3.264342"/>
+<status status="PASS" start="2024-04-07T15:39:42.420432" elapsed="4.542248"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-06T21:32:28.514927" elapsed="0.278514"/>
+<status status="PASS" start="2024-04-07T15:39:46.963673" elapsed="0.267812"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:25.250585" elapsed="3.543871"/>
+<status status="PASS" start="2024-04-07T15:39:42.420432" elapsed="4.811053"/>
 </kw>
 <kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:28.805439" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<msg time="2024-04-07T15:39:47.277358" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-04-06T21:32:28.804434" elapsed="0.366040"/>
+<status status="PASS" start="2024-04-07T15:39:47.277358" elapsed="6.210904"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:28.804434" elapsed="0.366040"/>
+<status status="PASS" start="2024-04-07T15:39:47.276360" elapsed="6.211902"/>
 </kw>
 <kw name="Digitar o nome do produto &quot;Xbox Series S&quot; no campo de pesquisa" owner="amazon_resources" source_name="Digitar o nome do produto &quot;${PRODUTO}&quot; no campo de pesquisa">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:29.176447" level="INFO">Typing text 'Xbox Series S' into text field '//input[contains(@type,'text')]'.</msg>
+<msg time="2024-04-07T15:39:53.693392" level="INFO">Typing text 'Xbox Series S' into text field '//input[contains(@type,'text')]'.</msg>
 <arg>locator=${LOCATOR_PRODUTO}</arg>
 <arg>text=${PRODUTO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T21:32:29.175451" elapsed="3.892158"/>
+<status status="PASS" start="2024-04-07T15:39:53.693392" elapsed="0.706875"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:29.175451" elapsed="3.892158"/>
+<status status="PASS" start="2024-04-07T15:39:53.673455" elapsed="0.726812"/>
 </kw>
 <kw name="Clicar no botão de pesquisa" owner="amazon_resources">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:33.068607" level="INFO">Clicking button '//input[contains(@type,'submit')]'.</msg>
+<msg time="2024-04-07T15:39:54.414227" level="INFO">Clicking button '//input[contains(@type,'submit')]'.</msg>
 <arg>locator=${LOCATOR_BOTAO_PESQUISAR}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T21:32:33.068607" elapsed="2.409750"/>
+<status status="PASS" start="2024-04-07T15:39:54.413232" elapsed="3.480523"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:33.068607" elapsed="2.409750"/>
+<status status="PASS" start="2024-04-07T15:39:54.412233" elapsed="3.481522"/>
 </kw>
 <kw name="Verificar o resultado da pesquisa, se está listando o produto pesquisado" owner="amazon_resources">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-04-06T21:32:35.557808" level="INFO">Current page contains text 'Xbox Series S'.</msg>
+<msg time="2024-04-07T15:39:58.292234" level="INFO">Current page contains text 'Xbox Series S'.</msg>
 <arg>text=${NOME_PRODUTO}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-04-06T21:32:35.478357" elapsed="0.080455"/>
+<status status="PASS" start="2024-04-07T15:39:57.895749" elapsed="0.396485"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:35.478357" elapsed="0.080455"/>
+<status status="PASS" start="2024-04-07T15:39:57.894754" elapsed="0.398477"/>
 </kw>
 <kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-06T21:32:35.584736" elapsed="2.537322"/>
+<status status="PASS" start="2024-04-07T15:39:58.295226" elapsed="3.865187"/>
 </kw>
-<status status="PASS" start="2024-04-06T21:32:35.584736" elapsed="2.537322"/>
+<status status="PASS" start="2024-04-07T15:39:58.294231" elapsed="3.866182"/>
 </kw>
 <doc>Esse teste verifica a busca de um produto</doc>
 <tag>busca_produtos</tag>
 <tag>lista_busca</tag>
-<status status="PASS" start="2024-04-06T21:32:25.250585" elapsed="12.871473"/>
+<status status="PASS" start="2024-04-07T15:39:42.419431" elapsed="19.743972"/>
 </test>
 <doc>Essa suite testa o site da Amazon.com.br</doc>
-<status status="PASS" start="2024-04-06T21:32:07.747433" elapsed="30.374625"/>
+<status status="PASS" start="2024-04-07T15:39:18.797537" elapsed="43.389802"/>
 </suite>
 <statistics>
 <total>
