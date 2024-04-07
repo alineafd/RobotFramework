@@ -16,6 +16,7 @@ Abrir o navegador
     Maximize Browser Window
 
 Fechar o navegador
+    Capture Page Screenshot
     Close Browser
 
 Acessar a home page do site Amazon.com.br
@@ -39,5 +40,5 @@ Digitar o nome do produto "${PRODUTO}" no campo de pesquisa
 Clicar no botão de pesquisa
     Click Button    locator=${LOCATOR_BOTAO_PESQUISAR}
 
-Verificar o resultado da pesquisa, se está listando o produto pesquisado
-    Page Should Contain    text=${NOME_PRODUTO}
+Verificar o resultado da pesquisa se está listando o produto "${PRODUTO}"
+    Page Should Contain    text=${PRODUTO}
